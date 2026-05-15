@@ -7,7 +7,7 @@ import {
   Award, 
   Mail, 
   ExternalLink, 
-  CheckCircle2, 
+  CircleCheck, 
   Menu, 
   X,
   Dna,
@@ -17,7 +17,7 @@ import {
   Calendar,
   ChevronDown
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Types
 interface ExperienceItem {
@@ -278,7 +278,7 @@ export default function App() {
                 <ul className="space-y-3">
                   {item.skills.map((skill, si) => (
                     <li key={si} className="flex items-center gap-3 text-slate-600 text-sm font-medium">
-                      <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                      <CircleCheck className="w-4 h-4 text-blue-500 shrink-0" />
                       {skill}
                     </li>
                   ))}
@@ -393,7 +393,7 @@ export default function App() {
                     "English: OPIc AL / TOEIC 945"
                   ].map((cert, ci) => (
                     <div key={ci} className="flex items-center gap-4 p-4 rounded-xl border border-slate-50 font-medium text-slate-700 hover:bg-slate-50 transition-colors">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
+                      <CircleCheck className="w-5 h-5 text-green-500" />
                       {cert}
                     </div>
                   ))}
@@ -442,7 +442,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="py-10 border-t border-slate-100 bg-white">
-        <div className="container mx-auto px-6 flex flex-col md:row justify-between items-center gap-4">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-blue-600" />
             <span className="font-bold text-slate-900">QCQA Portfolio</span>
